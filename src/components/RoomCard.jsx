@@ -4,36 +4,33 @@ import standardRoom from '/standard-room.jpg';
 import deluxeRoom from '/deluxe-room.jpg';
 import suite from '/suite.jpg';
 
-const IMAGE_PATHS = [
-    standardRoom,
-    deluxeRoom,
-    suite
-];
+const IMAGE_PATHS = [standardRoom, deluxeRoom, suite];
 
 function RoomCard({ roomType, imageIndex }) {
-    const isMobile=useIsMobile();
+    const isMobile = useIsMobile();
     const navigate = useNavigate();
 
     return (
-        <div
-        style={{
-            position: 'relative',
-            height: '225px',
-            width:isMobile? '80vw':'25vw',
-            borderRadius: '20px',
-            backgroundImage: `url(${IMAGE_PATHS[imageIndex % IMAGE_PATHS.length]})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            overflow: 'hidden',
-            border: '1.75px solid #100b31',
-            boxShadow: '0 24px 60px #1b1b1bf7',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between'
-        }}>
-            <header style={{
-                padding: '1rem 1.5rem'
-            }}>
+        <article
+            role="img"
+            aria-label={`${roomType} room at Meridian Sands`}
+            style={{
+                position: 'relative',
+                height: '225px',
+                width: isMobile ? '80vw' : '25vw',
+                borderRadius: '20px',
+                backgroundImage: `url(${IMAGE_PATHS[imageIndex % IMAGE_PATHS.length]})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                overflow: 'hidden',
+                border: '1.75px solid #100b31',
+                boxShadow: '0 24px 60px #1b1b1bf7',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between'
+            }}
+        >
+            <div style={{ padding: '1rem 1.5rem' }}>
                 <h3 style={{
                     margin: 0,
                     color: 'white',
@@ -43,26 +40,30 @@ function RoomCard({ roomType, imageIndex }) {
                 }}>
                     {roomType}
                 </h3>
-            </header>
+            </div>
 
             <button
-            type="button"
-            style={{
-                width: '100%',
-                height: '40px',
-                borderRadius:'0px',
-                background: 'white',
-                border: 'none',
-                fontSize: '0.8rem',
-                color: '#000000',
-                cursor: 'pointer',
-                fontWeight: 'bold'
-            }}
-            onClick={() => navigate('/booking', { state: { roomType } })}
+                type="button"
+                aria-label={`Book ${roomType} room`}
+                style={{
+                    width: '100%',
+                    height: '40px',
+                    borderRadius: '0px',
+                    background: 'white',
+                    border: 'none',
+                    fontSize: '0.8rem',
+                    color: '#000000',
+                    cursor: 'pointer',
+                    fontWeight: 'bold',
+                    outline: 'none',
+                }}
+                onFocus={e => e.target.style.outline = '3px solid #17048e'}
+                onBlur={e => e.target.style.outline = 'none'}
+                onClick={() => navigate('/booking', { state: { roomType } })}
             >
                 Book this room
             </button>
-        </div>
+        </article>
     );
 }
 

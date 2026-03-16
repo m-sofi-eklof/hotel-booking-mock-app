@@ -43,7 +43,8 @@ function Navbar() {
                     alignItems: 'center',
                     fontSize: '0.8rem',
                     justifyContent: 'flex-start',
-                    gap: '2rem'
+                    gap: '2rem',
+                    textDecoration:'underline'
                 }}
             >
                 <Link to="/" style={{ color: '#17048e' }}>Home</Link>

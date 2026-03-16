@@ -21,7 +21,6 @@ function Home() {
     return (
         <main style={{ paddingBottom: isMobile ? '30px' : '0px' }}>
             <Hero />
-            //hidden descriptiv header
             <section aria-label="Available rooms" style={containerStyle}>
                 <h2 style={{
                     position: 'absolute',

@@ -10,7 +10,7 @@ function Booking(){
         width: '100vw',
         height:'96vh',
         position:'relative',
-        backgroundImage: "url('/birds-eye-view.jpg')",
+        backgroundImage: "url('./birds-eye-view.jpg')",
         backgroundSize: 'cover',
         overflow:'hidden',
         backgroundPosition: 'center',

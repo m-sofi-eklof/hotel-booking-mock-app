@@ -45,9 +45,9 @@ function Help() {
                     <hr style={{ margin: '1rem 0', border: 'none', borderTop: '1px solid #eee' }} />
 
                     <h3 style={{ marginBottom: '0.5rem', fontSize: '1rem' }}>Phone hours</h3>
-                    <p style={{ margin: '0.2rem 0', color: '#555', fontSize: '0.9rem' }}>Monday – Friday: 09:00 – 20:00</p>
-                    <p style={{ margin: '0.2rem 0', color: '#555', fontSize: '0.9rem' }}>Saturday: 10:00 – 16:00</p>
-                    <p style={{ margin: '0.2rem 0', color: '#555', fontSize: '0.9rem' }}>Sunday: 10:00 – 14:00</p>
+                    <p style={{ margin: '0.2rem 0', color: '#555', fontSize: '0.9rem' }}>Monday to Friday: 09:00 - 20:00</p>
+                    <p style={{ margin: '0.2rem 0', color: '#555', fontSize: '0.9rem' }}>Saturday: 10:00 - 16:00</p>
+                    <p style={{ margin: '0.2rem 0', color: '#555', fontSize: '0.9rem' }}>Sunday: 10:00 - 14:00</p>
                 </div>
             </div>
 
@@ -80,8 +80,6 @@ function Help() {
                         flexDirection: 'column',
                         gap: '1rem'
                     }}>
-                        <h3 style={{ margin: 0, marginBottom: '0.5rem' }}>Send a message</h3>
-
                         <div>
                             <label style={labelStyle}>Email</label>
                             <input

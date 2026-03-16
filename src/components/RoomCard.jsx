@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 import useIsMobile from "../hooks/useIsMobile";
 
 const IMAGE_PATHS = [
-    '/standard-room.jpg',
-    '/deluxe-room.jpg',
-    '/suite.jpg'
+    './standard-room.jpg',
+    './deluxe-room.jpg',
+    './suite.jpg'
 ];
 
 function RoomCard({ roomType, imageIndex }) {

@@ -18,7 +18,7 @@ function Hero(){
                     position:'relative',
                     width: '100vw',
                     height: isMobile? '96vh':'65vh',
-                    backgroundImage: "url('/hotel-view.jpg')",
+                    backgroundImage: "url('./hotel-view.jpg')",
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
